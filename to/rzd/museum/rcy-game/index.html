@@ -27,18 +27,20 @@
         {
             window.location.replace(rule.targets.windowsPhone);
         }
-        //
+        else
         if (/android/i.test(userAgent))
         {
             window.location.replace(rule.targets.android);
         }
-        //
+        else
         if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
         {
             window.location.replace(rule.targets.ios);
         }
-        //
-        window.location.replace(rule.targets._default);
+        else
+        {
+            window.location.replace(rule.targets._default);
+        }
         </script>
         <!--  -->
     </body>

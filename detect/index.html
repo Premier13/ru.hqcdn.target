@@ -19,18 +19,20 @@
         {
             document.write("<h1 style='text-align: center;'>"+"windowsPhone"+"</h1>");
         }
-        //
-        if (/android/i.test(userAgent))
+        else if (/android/i.test(userAgent))
         {
             document.write("<h1 style='text-align: center;'>"+"android"+"</h1>");
         }
-        //
-        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
+        else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
         {
             document.write("<h1 style='text-align: center;'>"+"ios"+"</h1>");
         }
+        else
+        {
+            document.write("<h1 style='text-align: center;'>"+"default"+"</h1>");	
+        }
         //
-        document.write("<h1 style='text-align: center;'>"+"default"+"</h1>");
+        
         </script>
         <!--  -->
     </body>
