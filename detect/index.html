@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <title></title>
+    </head>
+    <body>
+        <!--  -->
+        <script type="text/javascript">
+        //
+        
+        //
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        //
+        if (/windows phone/i.test(userAgent))
+        {
+            document.write("<h1 style='text-align: center;'>"+"windowsPhone"+"</h1>");
+        }
+        //
+        if (/android/i.test(userAgent))
+        {
+            document.write("<h1 style='text-align: center;'>"+"android"+"</h1>");
+        }
+        //
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream)
+        {
+            document.write("<h1 style='text-align: center;'>"+"ios"+"</h1>");
+        }
+        //
+        document.write("<h1 style='text-align: center;'>"+"default"+"</h1>");
+        </script>
+        <!--  -->
+    </body>
+</html>
