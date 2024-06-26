@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        
+        <title>Сортировочная станция - мобильная игра</title>
+    </head>
+    <body>
+        <!--  -->
+        <script type="text/javascript">
+        //
+        var rule = {
+            "type" : "os",
+            "targets" : {
+                "ios"          : "https://apps.apple.com/us/app/%D1%81%D0%BE%D1%80%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%BE%D1%87%D0%BD%D0%B0%D1%8F-%D1%81%D1%82%D0%B0%D0%BD%D1%86%D0%B8%D1%8F/id6474672019",
+                "android"      : "https://play.google.com/store/apps/details?id=com.cygame.app",
+                "windowsPhone" : "https://rcy-game.rzd-museum.ru",
+                "_default"     : "https://rcy-game.rzd-museum.ru"
+            },
+        };
+        //
+        if (/windows phone/i.test(navigator.userAgent))
+        {
+            window.location.replace(rule.targets.windowsPhone);
+        }
+        //
+        if (/android/i.test(navigator.userAgent))
+        {
+            window.location.replace(rule.targets.android);
+        }
+        //
+        if (/iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream)
+        {
+            window.location.replace(rule.targets.ios);
+        }
+        //
+        window.location.replace(rule.targets._default);
+        </script>
+        <!--  -->
+    </body>
+</html>
